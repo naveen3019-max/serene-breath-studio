@@ -1,7 +1,14 @@
-import { Heart } from "lucide-react";
+import { Heart, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Youtube, href: "#", label: "YouTube" },
+  ];
 
   const links = {
     practice: [
@@ -39,9 +46,23 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-background/70 breathing-rhythm max-w-sm mb-6">
-              Guiding you on your journey to inner peace, physical strength, 
+              Guiding you on your journey to inner peace, physical strength,
               and mindful living through the transformative practice of yoga.
             </p>
+
+            <div className="flex items-center gap-4 mb-8">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  className="w-10 h-10 rounded-full border border-background/10 flex items-center justify-center text-background/50 hover:text-background hover:border-primary-soft hover:bg-primary-soft/10 transition-all duration-300 group"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5 transition-transform group-hover:scale-110" />
+                </a>
+              ))}
+            </div>
+
             <p className="text-sm text-background/50">
               123 Peaceful Lane
               <br />
