@@ -39,10 +39,10 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 rounded-full bg-primary-soft flex items-center justify-center">
-                <span className="text-foreground font-serif text-lg">S</span>
+                <span className="text-foreground font-serif text-lg">A</span>
               </div>
               <span className="font-serif text-xl font-semibold text-background">
-                Serenity Yoga
+                Alayam Yoga
               </span>
             </div>
             <p className="text-background/70 breathing-rhythm max-w-sm mb-6">

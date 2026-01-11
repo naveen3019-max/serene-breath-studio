@@ -39,7 +39,7 @@ const AboutSection = () => {
             </span>
             
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mt-4 mb-6 leading-tight">
-              A Journey of
+              Meena Siva Kumar
               <br />
               <span className="text-primary italic">Mindful Living</span>
             </h2>

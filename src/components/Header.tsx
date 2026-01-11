@@ -33,12 +33,12 @@ const Header = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-serif text-lg">S</span>
+            <span className="text-primary-foreground font-serif text-lg">A</span>
           </div>
           <span className={`font-serif text-xl font-semibold transition-colors duration-300 ${
             isScrolled ? "text-foreground" : "text-primary-foreground"
           }`}>
-            Serenity Yoga
+            Alayam Yoga
           </span>
         </a>
 
