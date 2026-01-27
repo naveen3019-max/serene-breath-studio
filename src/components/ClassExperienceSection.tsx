@@ -2,6 +2,7 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import studioImg from "@/assets/studio-atmosphere.png";
 import classImg from "@/assets/class-atmosphere.png";
+import smallGroupImg from "@/assets/small-group-yoga.jpg";
 
 const ClassExperienceSection = () => {
     const highlightFeatures = [
@@ -81,10 +82,10 @@ const ClassExperienceSection = () => {
                 {/* Second Row - Class Atmosphere */}
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="relative group order-2 lg:order-1">
-                        <div className="rounded-[2.5rem] overflow-hidden shadow-glow aspect-video lg:aspect-square">
+                        <div className="rounded-[2.5rem] overflow-hidden shadow-glow aspect-video lg:aspect-square mb-8">
                             <img
-                                src={classImg}
-                                alt="Intimate Yoga Class in Session"
+                                src={smallGroupImg}
+                                alt="Small group yoga class session"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
