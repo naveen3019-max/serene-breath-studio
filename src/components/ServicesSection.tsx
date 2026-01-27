@@ -43,6 +43,14 @@ const services = [
     color: "bg-blue-100/40",
   },
   {
+    icon: Wind,
+    title: "Pranayama",
+    description: "It is a yogic practice of breath control. It uses specific techniques like deep inhalation (purak) and holding breath (kumbak) or slow exhalation (rechaka). It helps to calm the mind, increase energy, and purify the body.",
+    duration: "20-40 min",
+    level: "All Levels",
+    color: "bg-cyan-100/40",
+  },
+  {
     icon: Users,
     title: "Private Sessions",
     description: "Personalized one-on-one guidance tailored to your unique needs and goals.",
