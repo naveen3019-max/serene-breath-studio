@@ -1,4 +1,4 @@
-import { Flower2, Wind, Waves, Monitor, Users, Sparkles, Flame } from "lucide-react";
+import { Flower2, Wind, Waves, Monitor, Users, Sparkles, Flame, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
@@ -33,6 +33,14 @@ const services = [
     duration: "60 min",
     level: "Intermediate",
     color: "bg-primary/10",
+  },
+  {
+    icon: BookOpen,
+    title: "Patanjali Yoga",
+    description: "It is a classical system of yoga focusing on calming the mind's fluctuations to achieve spiritual enlightenment, not just physical postures. It is a holistic path.",
+    duration: "60-75 min",
+    level: "All Levels",
+    color: "bg-blue-100/40",
   },
   {
     icon: Users,
