@@ -13,7 +13,7 @@ const services = [
   {
     icon: Wind,
     title: "Hatha Yoga",
-    description: "Traditional practice focusing on physical postures, breathing, and relaxation.",
+    description: "A typical hatha yoga integrates asanas (postures), pranayama (mindful breathing) and meditation to align, strengthen and balance the body and mind. It promotes calm and focus.",
     duration: "60-90 min",
     level: "Beginner",
     color: "bg-accent/30",
