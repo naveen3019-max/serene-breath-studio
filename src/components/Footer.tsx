@@ -64,9 +64,7 @@ const Footer = () => {
             </div>
 
             <p className="text-sm text-background/50">
-              123 Peaceful Lane
-              <br />
-              Wellness City, WC 12345
+              India
             </p>
           </div>
 

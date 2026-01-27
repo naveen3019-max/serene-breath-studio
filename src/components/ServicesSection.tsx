@@ -1,5 +1,6 @@
 import { Flower2, Wind, Waves, Monitor, Users, Sparkles, Flame, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const services = [
   {
@@ -74,9 +75,41 @@ const services = [
     level: "All Levels",
     color: "bg-lavender/30",
   },
+  {
+    icon: Users,
+    title: "Yoga Philosophy",
+    description: "Explore the roots and wisdom of yoga philosophy with our experienced instructors.",
+    duration: "45 min",
+    level: "All Levels",
+    color: "bg-emerald-100/40",
+    extra: true,
+  },
+  {
+    icon: BookOpen,
+    title: "Instructor Q&A",
+    description: "Get your questions answered in live Q&A sessions with our yoga teachers.",
+    duration: "30 min",
+    level: "All Levels",
+    color: "bg-pink-100/40",
+    extra: true,
+  },
+  {
+    icon: Flower2,
+    title: "Teacher's Special Class",
+    description: "Unique classes designed and led by our lead instructors for deeper learning.",
+    duration: "60 min",
+    level: "All Levels",
+    color: "bg-indigo-100/40",
+    extra: true,
+  },
 ];
 
 const ServicesSection = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleServices = showAll ? services : services.filter((s) => !s.extra);
+
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section id="services" className="py-24 md:py-32 bg-card relative overflow-hidden">
       {/* Background Decoration */}
@@ -102,7 +135,7 @@ const ServicesSection = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+          {visibleServices.map((service, index) => (
             <div
               key={index}
               className="group p-8 rounded-3xl bg-background shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1"
@@ -128,9 +161,11 @@ const ServicesSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <Button variant="default" size="lg">
-            Explore All Programs
-          </Button>
+          {!showAll && (
+            <Button variant="default" size="lg" onClick={() => setShowAll(true)}>
+              Explore More Programs
+            </Button>
+          )}
         </div>
       </div>
     </section>

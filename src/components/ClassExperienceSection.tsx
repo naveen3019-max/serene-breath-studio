@@ -2,7 +2,7 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import studioImg from "@/assets/studio-atmosphere.png";
 import classImg from "@/assets/class-atmosphere.png";
-import smallImg from "@/assets/small.png";
+import smallImg from "@/assets/small.jpeg";
 
 const ClassExperienceSection = () => {
     const highlightFeatures = [
@@ -55,21 +55,23 @@ const ClassExperienceSection = () => {
                             ))}
                         </div>
 
-                        <Button size="lg" className="group">
-                            Book Your First Session
-                            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                        <Button asChild size="lg" className="group">
+                            <a href="#contact">
+                                Book Your First Session
+                                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                            </a>
                         </Button>
                     </div>
 
                     {/* Image Side - Studio View */}
                     <div className="relative group">
-                        <div className="rounded-[2.5rem] overflow-hidden shadow-glow aspect-video lg:aspect-square">
+                        <div className="rounded-[4rem] overflow-hidden aspect-video lg:aspect-square mb-8 bg-black flex items-center justify-center">
                             <img
                                 src={studioImg}
                                 alt="Minimalist Zen Yoga Studio"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="w-full h-full object-cover object-center max-h-full max-w-full rounded-[4rem]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent pointer-events-none rounded-[4rem]" />
                         </div>
                         {/* Floating Label */}
                         <div className="absolute -bottom-6 -right-6 md:right-12 bg-background/80 backdrop-blur-md p-6 rounded-2xl border border-border/50 shadow-soft max-w-[200px] animate-fade-up">
@@ -82,13 +84,13 @@ const ClassExperienceSection = () => {
                 {/* Second Row - Class Atmosphere */}
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="relative group order-2 lg:order-1">
-                        <div className="rounded-[2.5rem] overflow-hidden shadow-glow aspect-video lg:aspect-square mb-8">
+                        <div className="relative aspect-video lg:aspect-square mb-8 flex items-center justify-center">
                             <img
                                 src={smallImg}
                                 alt="Small group yoga class session"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="w-full h-full object-cover object-center max-h-full max-w-full rounded-[4rem]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent pointer-events-none rounded-[4rem]" />
                         </div>
                     </div>
 

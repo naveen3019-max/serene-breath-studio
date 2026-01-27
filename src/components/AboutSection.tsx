@@ -1,4 +1,4 @@
-import instructorImage from "@/assets/instructor-portrait.jpg";
+import profileImg from "@/assets/profile.jpeg";
 import { Award, GraduationCap, Heart, Globe } from "lucide-react";
 
 const AboutSection = () => {
@@ -21,9 +21,9 @@ const AboutSection = () => {
             <div className="relative z-10">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-medium">
                 <img
-                  src={instructorImage}
-                  alt="Yoga instructor portrait"
-                  className="w-full h-full object-cover"
+                  src={profileImg}
+                  alt="Yoga instructor profile"
+                  className="w-full h-full object-cover rounded-[2rem]"
                 />
               </div>
             </div>

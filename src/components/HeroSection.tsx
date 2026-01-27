@@ -39,13 +39,17 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up animation-delay-600">
-            <Button variant="hero" size="lg" className="group">
-              Begin Your Journey
-              <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+            <Button asChild variant="hero" size="lg" className="group">
+              <a href="#about">
+                Begin Your Journey
+                <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
-            <Button variant="hero-outline" size="lg" className="group">
-              <Play className="mr-2 w-4 h-4" />
-              View Classes
+            <Button asChild variant="hero-outline" size="lg" className="group">
+              <a href="#services">
+                <Play className="mr-2 w-4 h-4" />
+                View Classes
+              </a>
             </Button>
           </div>
         </div>

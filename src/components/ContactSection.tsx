@@ -25,7 +25,7 @@ const ContactSection = () => {
   const contactInfo = [
     { icon: Mail, label: "Email", value: "meena200614@gmail.com" },
     { icon: Phone, label: "Phone / WhatsApp", value: "+1 (555) 123-4567" },
-    { icon: MapPin, label: "Studio Location", value: "123 Peaceful Lane, Wellness City" },
+    { icon: MapPin, label: "Studio Location", value: "India" },
   ];
 
   return (
