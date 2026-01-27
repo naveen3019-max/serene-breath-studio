@@ -1,4 +1,4 @@
-import { Flower2, Wind, Waves, Monitor, Users, Sparkles } from "lucide-react";
+import { Flower2, Wind, Waves, Monitor, Users, Sparkles, Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
@@ -17,6 +17,14 @@ const services = [
     duration: "60-90 min",
     level: "Beginner",
     color: "bg-accent/30",
+  },
+  {
+    icon: Flame,
+    title: "Ashtanga Yoga",
+    description: "This practice follows a precise order of poses (asanas), creating internal heat and detoxification.",
+    duration: "75-90 min",
+    level: "Intermediate",
+    color: "bg-orange-100/50",
   },
   {
     icon: Waves,
