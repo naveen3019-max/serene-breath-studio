@@ -50,10 +50,16 @@ const AboutSection = () => {
               blends traditional yogic wisdom with modern understanding of the body and mind.
             </p>
             
-            <p className="text-muted-foreground breathing-rhythm mb-8">
+            <p className="text-muted-foreground breathing-rhythm mb-4">
               Trained at the Iyengar Yoga Institute and the Krishnamacharya Yoga Mandiram, 
               I bring a unique perspective that honors ancient traditions while making yoga 
               accessible and relevant for today's world.
+            </p>
+            
+            <p className="text-muted-foreground breathing-rhythm mb-4">
+              Being a yoga instructor for above 4 years.<br />
+              Conducted yoga workshops in various schools and colleges.<br />
+              Been a judge for the yoga competition in the university.
             </p>
 
             {/* Highlights Grid */}
