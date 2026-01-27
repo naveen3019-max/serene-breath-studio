@@ -29,7 +29,7 @@ const services = [
   {
     icon: Waves,
     title: "Vinyasa Flow",
-    description: "Dynamic sequences linking breath with movement for strength and flexibility.",
+    description: "It is fluid movement through a series of postures. It builds strength and flexibility. It is a high energy practice that increases heart rate and strengthens the body.",
     duration: "60 min",
     level: "Intermediate",
     color: "bg-primary/10",
