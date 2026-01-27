@@ -2,7 +2,7 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import studioImg from "@/assets/studio-atmosphere.png";
 import classImg from "@/assets/class-atmosphere.png";
-import smallGroupImg from "@/assets/small-group-yoga.jpg";
+import smallImg from "@/assets/small.png";
 
 const ClassExperienceSection = () => {
     const highlightFeatures = [
@@ -84,7 +84,7 @@ const ClassExperienceSection = () => {
                     <div className="relative group order-2 lg:order-1">
                         <div className="rounded-[2.5rem] overflow-hidden shadow-glow aspect-video lg:aspect-square mb-8">
                             <img
-                                src={smallGroupImg}
+                                src={smallImg}
                                 alt="Small group yoga class session"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
