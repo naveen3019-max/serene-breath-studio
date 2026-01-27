@@ -27,7 +27,7 @@ const ClassExperienceSection = () => {
                     {/* Content Side */}
                     <div>
                         <span className="text-primary text-sm font-medium tracking-[0.2em] uppercase mb-4 block">
-                            The Serenity Experience
+                            The Alayam Yoga Experience
                         </span>
                         <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-[1.1]">
                             A Sacred Space for
@@ -36,7 +36,7 @@ const ClassExperienceSection = () => {
                         </h2>
 
                         <p className="text-muted-foreground text-lg mb-10 breathing-rhythm">
-                            Your journey deserves an environment that inspires peace. At Serenity,
+                            Your journey deserves an environment that inspires peace. At Alayam Yoga,
                             we've curated every detail—from the scent of sandalwood to the
                             soft morning light—to help you leave the world behind.
                         </p>

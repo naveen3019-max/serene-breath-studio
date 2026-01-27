@@ -1,0 +1,16 @@
+{
+  "name": "Alayam Yoga",
+  "short_name": "AlayamYoga",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#7c3aed",
+  "description": "Premium Yoga Classes & Wellness Retreats in India.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

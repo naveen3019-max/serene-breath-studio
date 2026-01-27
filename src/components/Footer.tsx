@@ -123,7 +123,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-background/50">
-            © {currentYear} Serenity Yoga. All rights reserved.
+            © {currentYear} Alayam Yoga. All rights reserved.
           </p>
           <p className="text-sm text-background/50 flex items-center gap-1">
             Made with <Heart className="w-3 h-3 text-primary-soft" /> for mindful living
