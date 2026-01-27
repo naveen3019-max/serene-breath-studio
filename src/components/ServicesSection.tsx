@@ -5,7 +5,7 @@ const services = [
   {
     icon: Flower2,
     title: "Meditation & Mindfulness",
-    description: "Cultivate inner peace and mental clarity through guided meditation practices.",
+    description: "Directing attention to a single point. Noticing thoughts and feelings as they arise. Cultivating a feeling of compassion and warmth towards yourself and others.",
     duration: "30-60 min",
     level: "All Levels",
     color: "bg-lavender/30",
