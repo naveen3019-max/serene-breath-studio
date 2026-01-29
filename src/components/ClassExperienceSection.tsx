@@ -107,7 +107,7 @@ const ClassExperienceSection = () => {
                         </p>
                         <div className="p-6 rounded-2xl bg-primary/5 border border-primary/10">
                             <p className="text-foreground italic font-serif text-lg">
-                                "The instructor actually знает my name and notices my alignment.
+                                "The instructor actually knows my name and notices my alignment.
                                 I've never felt so seen in a yoga class."
                             </p>
                             <p className="text-primary text-sm mt-4 font-medium">— Sarah M., Member since 2023</p>

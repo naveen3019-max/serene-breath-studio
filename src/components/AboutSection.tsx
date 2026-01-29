@@ -13,7 +13,7 @@ const AboutSection = () => {
     <section id="about" className="py-24 md:py-32 relative overflow-hidden">
       {/* Subtle Background Pattern */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/20 to-transparent" />
-      
+
       <div className="container mx-auto px-6 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image Column */}
@@ -37,29 +37,41 @@ const AboutSection = () => {
             <span className="text-primary text-sm font-medium tracking-[0.2em] uppercase">
               About Your Guide
             </span>
-            
+
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mt-4 mb-6 leading-tight">
               Meena Siva Kumar
               <br />
               <span className="text-primary italic">Mindful Living</span>
             </h2>
-            
+
             <p className="text-muted-foreground text-lg breathing-rhythm mb-6">
-              With over 15 years of dedicated practice and teaching, I've had the privilege 
-              of studying with renowned masters in India, Bali, and beyond. My approach 
-              blends traditional yogic wisdom with modern understanding of the body and mind.
+              My journey with yoga began over 15 years ago, not in a studio, but on a quiet
+              beach in Kerala, where I discovered the profound connection between breath,
+              movement, and inner peace. Since then, I've dedicated my life to deepening
+              this practice and sharing its transformative power with others.
             </p>
-            
+
             <p className="text-muted-foreground breathing-rhythm mb-4">
-              Trained at the Iyengar Yoga Institute and the Krishnamacharya Yoga Mandiram, 
-              I bring a unique perspective that honors ancient traditions while making yoga 
-              accessible and relevant for today's world.
+              I've had the honor of studying under experienced masters across India, where I
+              learned the sacred art of alignment, pranayama, and therapeutic yoga. My
+              training encompasses various styles including Hatha, Vinyasa Flow, Ashtanga,
+              Patanjali Yoga, and meditation practices, allowing me to offer a well-rounded
+              approach to each student's unique journey.
             </p>
-            
+
             <p className="text-muted-foreground breathing-rhythm mb-4">
-              Being a yoga instructor for above 4 years.<br />
-              Conducted yoga workshops in various schools and colleges.<br />
-              Been a judge for the yoga competition in the university.
+              As a certified RYT-500 instructor with over 4 years of professional teaching
+              experience, I've guided thousands of students from complete beginners to
+              advanced practitioners. I've conducted transformative workshops in schools,
+              colleges, and corporate settings, and had the privilege of serving as a judge
+              for university yoga competitions.
+            </p>
+
+            <p className="text-muted-foreground breathing-rhythm mb-4">
+              My teaching philosophy is simple: yoga is not about touching your toes, it's
+              about what you learn on the way down. I believe in creating a safe, inclusive
+              space where every body is honored, every breath is sacred, and every student
+              can discover their own unique path to wellness and self-discovery.
             </p>
 
             {/* Highlights Grid */}

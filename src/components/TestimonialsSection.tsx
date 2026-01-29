@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
             <span className="text-primary italic">Transformation</span>
           </h2>
           <p className="text-muted-foreground text-lg breathing-rhythm">
-            Join a global community of practitioners who have found peace, 
+            Join a global community of practitioners who have found peace,
             strength, and balance through their yoga journey.
           </p>
         </div>
@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
           {[
             { number: "5000+", label: "Students Worldwide" },
             { number: "15+", label: "Years Experience" },
-            { number: "30+", label: "Countries Reached" },
+            { number: "10+", label: "Countries Reached" },
             { number: "98%", label: "Satisfaction Rate" },
           ].map((stat, index) => (
             <div key={index} className="text-center">

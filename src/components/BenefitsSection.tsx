@@ -4,32 +4,38 @@ const benefits = [
   {
     icon: Heart,
     title: "Reduces Stress & Anxiety",
-    description: "Regular practice calms the nervous system and promotes emotional balance.",
+    description: "Regular practice calms the nervous system and promotes emotional balance by lowering cortisol levels.",
+    related: ["Deep Breathing", "Mindfulness", "Emotional Balance"],
   },
   {
     icon: Leaf,
     title: "Improves Flexibility",
-    description: "Gentle stretching increases range of motion and releases muscle tension.",
+    description: "Gentle stretching increases range of motion and releases muscle tension throughout the entire body.",
+    related: ["Joint Mobility", "Muscle Release", "Better Posture"],
   },
   {
     icon: Zap,
     title: "Strengthens Body",
-    description: "Build core strength and muscle tone through mindful, controlled movements.",
+    description: "Build core strength and muscle tone through mindful, controlled movements without high-impact strain.",
+    related: ["Core Stability", "Muscle Tone", "Functional Strength"],
   },
   {
     icon: Brain,
     title: "Enhances Mental Clarity",
-    description: "Sharpen focus, improve concentration, and cultivate present-moment awareness.",
+    description: "Sharpen focus, improve concentration, and cultivate present-moment awareness through focused practice.",
+    related: ["Focus & Attention", "Cognitive Health", "Mental Peace"],
   },
   {
     icon: Sun,
     title: "Boosts Energy",
-    description: "Breathwork and movement invigorate the body and elevate your mood naturally.",
+    description: "Breathwork and movement invigorate the body and elevate your mood naturally for a sustained energy boost.",
+    related: ["Pranayama", "Vitality", "Better Circulation"],
   },
   {
     icon: Moon,
     title: "Promotes Better Sleep",
-    description: "Evening practices help calm the mind and prepare the body for restful sleep.",
+    description: "Evening practices help calm the mind and prepare the body for restful, deep regenerative sleep.",
+    related: ["Relaxation", "Insomnia Relief", "Sleep Quality"],
   },
 ];
 
@@ -54,7 +60,7 @@ const BenefitsSection = () => {
             <span className="text-primary italic">Consistent Practice</span>
           </h2>
           <p className="text-muted-foreground text-lg breathing-rhythm">
-            Yoga is more than exercise—it's a complete system for wellbeing 
+            Yoga is more than exercise—it's a complete system for wellbeing
             that nurtures body, mind, and spirit.
           </p>
         </div>
@@ -64,18 +70,29 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-500"
+              className="group relative p-8 rounded-3xl bg-card/40 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 shadow-soft hover:shadow-glow"
             >
-              {/* Glow Effect on Hover */}
-              <div className="absolute inset-0 rounded-3xl bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
               <div className="relative">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-6 h-6 text-primary" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <benefit.icon className="w-7 h-7 text-primary" />
                 </div>
-                
-                <h3 className="font-serif text-xl text-foreground mb-3">{benefit.title}</h3>
-                <p className="text-muted-foreground breathing-rhythm text-sm">{benefit.description}</p>
+
+                <h3 className="font-serif text-2xl text-foreground mb-4">{benefit.title}</h3>
+                <p className="text-muted-foreground breathing-rhythm text-sm leading-relaxed mb-6">
+                  {benefit.description}
+                </p>
+
+                {/* Related Tags */}
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {benefit.related.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="text-[10px] px-2 py-1 rounded-full bg-primary/10 text-primary font-medium tracking-wider uppercase border border-primary/5 group-hover:border-primary/20 transition-colors"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

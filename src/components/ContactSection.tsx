@@ -24,8 +24,8 @@ const ContactSection = () => {
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "meena200614@gmail.com" },
-    { icon: Phone, label: "Phone / WhatsApp", value: "+1 (555) 123-4567" },
-    { icon: MapPin, label: "Studio Location", value: "India" },
+    { icon: Phone, label: "Phone / WhatsApp", value: "+91 98765 43210" },
+    { icon: MapPin, label: "Studio Location", value: "Alayam Yoga Studio, Chennai, Tamil Nadu, India" },
   ];
 
   return (
@@ -46,7 +46,7 @@ const ContactSection = () => {
             <span className="text-primary italic">Journey Today</span>
           </h2>
           <p className="text-muted-foreground text-lg breathing-rhythm">
-            Ready to transform your life through yoga? Reach out to discuss 
+            Ready to transform your life through yoga? Reach out to discuss
             how we can support your wellness goals.
           </p>
         </div>
@@ -55,7 +55,7 @@ const ContactSection = () => {
           {/* Contact Info */}
           <div>
             <h3 className="font-serif text-2xl text-foreground mb-8">Contact Information</h3>
-            
+
             <div className="space-y-6 mb-12">
               {contactInfo.map((info, index) => (
                 <div
@@ -77,7 +77,7 @@ const ContactSection = () => {
             <div className="p-8 rounded-3xl bg-primary text-primary-foreground">
               <h4 className="font-serif text-2xl mb-3">Ready to Start?</h4>
               <p className="text-primary-foreground/80 mb-6 breathing-rhythm">
-                Book your first session today and receive a complimentary 
+                Book your first session today and receive a complimentary
                 wellness consultation.
               </p>
               <Button variant="hero" className="group">
@@ -90,7 +90,7 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="p-8 md:p-10 rounded-3xl bg-card shadow-soft">
             <h3 className="font-serif text-2xl text-foreground mb-8">Send a Message</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="text-sm text-muted-foreground mb-2 block">Your Name</label>
@@ -102,7 +102,7 @@ const ContactSection = () => {
                   required
                 />
               </div>
-              
+
               <div>
                 <label className="text-sm text-muted-foreground mb-2 block">Email Address</label>
                 <Input
@@ -114,7 +114,7 @@ const ContactSection = () => {
                   required
                 />
               </div>
-              
+
               <div>
                 <label className="text-sm text-muted-foreground mb-2 block">Your Message</label>
                 <Textarea
@@ -125,7 +125,7 @@ const ContactSection = () => {
                   required
                 />
               </div>
-              
+
               <Button type="submit" size="lg" className="w-full">
                 <Send className="mr-2 w-4 h-4" />
                 Send Message
