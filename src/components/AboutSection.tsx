@@ -1,4 +1,4 @@
-import profileImg from "@/assets/profile.jpeg";
+import profileImg from "@/assets/images/about-me.jpg";
 import { Award, GraduationCap, Heart, Globe } from "lucide-react";
 
 const AboutSection = () => {
