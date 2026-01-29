@@ -1,3 +1,4 @@
+
 import { Flower2, Wind, Waves, Monitor, Users, Sparkles, Flame, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -8,7 +9,8 @@ const services = [
     title: "Meditation & Mindfulness",
     description: "Directing attention to a single point. Noticing thoughts and feelings as they arise. Cultivating a feeling of compassion and warmth towards yourself and others.",
     duration: "30-60 min",
-    level: "All Levels",
+    level: "All Levels Welcome",
+    focus: "Inner Peace & Emotional Balance",
     color: "bg-lavender/30",
   },
   {
@@ -16,15 +18,17 @@ const services = [
     title: "Hatha Yoga",
     description: "A typical hatha yoga integrates asanas (postures), pranayama (mindful breathing) and meditation to align, strengthen and balance the body and mind. It promotes calm and focus.",
     duration: "60-90 min",
-    level: "Beginner",
+    level: "Beginner Friendly",
+    focus: "Alignment & Foundational Strength",
     color: "bg-accent/30",
   },
   {
     icon: Flame,
     title: "Ashtanga Yoga",
-    description: "This practice follows a precise order of poses (asanas), creating internal heat and detoxification.",
+    description: "This practice follows a precise order of poses (asanas), creating internal heat and detoxification through a vigorous, flowing sequence.",
     duration: "75-90 min",
-    level: "Intermediate",
+    level: "Intermediate/Advanced",
+    focus: "Detoxification & Physical Discipline",
     color: "bg-orange-100/50",
   },
   {
@@ -32,7 +36,8 @@ const services = [
     title: "Vinyasa Flow",
     description: "It is fluid movement through a series of postures. It builds strength and flexibility. It is a high energy practice that increases heart rate and strengthens the body.",
     duration: "60 min",
-    level: "Intermediate",
+    level: "Step-Up Level",
+    focus: "Strength, Flexibility & Fluidity",
     color: "bg-primary/10",
   },
   {
@@ -40,65 +45,73 @@ const services = [
     title: "Patanjali Yoga",
     description: "It is a classical system of yoga focusing on calming the mind's fluctuations to achieve spiritual enlightenment, not just physical postures. It is a holistic path.",
     duration: "60-75 min",
-    level: "All Levels",
+    level: "Deep Practice",
+    focus: "Spiritual Growth & Mental Control",
     color: "bg-blue-100/40",
   },
   {
     icon: Wind,
     title: "Pranayama",
-    description: "It is a yogic practice of breath control. It uses specific techniques like deep inhalation (purak) and holding breath (kumbak) or slow exhalation (rechaka). It helps to calm the mind, increase energy, and purify the body.",
+    description: "It is a yogic practice of breath control. It uses specific techniques like deep inhalation (purak) and holding breath (kumbak) or slow exhalation (rechaka). It helps to calm the mind.",
     duration: "20-40 min",
-    level: "All Levels",
+    level: "All Paths",
+    focus: "Vital Energy & Nervous System Regulation",
     color: "bg-cyan-100/40",
   },
   {
     icon: Users,
     title: "Private Sessions",
-    description: "Personalized one-on-one guidance tailored to your unique needs and goals.",
+    description: "Personalized one-on-one guidance tailored to your unique needs and goals. Perfect for deep individualized attention.",
     duration: "60 min",
-    level: "All Levels",
+    level: "Customized for You",
+    focus: "Targeted Goals & Personalized Adjustments",
     color: "bg-gold/20",
   },
   {
     icon: Monitor,
     title: "Online Classes",
-    description: "Join live virtual sessions from anywhere in the world with full interaction.",
+    description: "Join live virtual sessions from anywhere in the world with full interaction and real-time posture corrections.",
     duration: "45-60 min",
-    level: "All Levels",
+    level: "Accessible to All",
+    focus: "Global Connection & Home Practice",
     color: "bg-accent/30",
   },
   {
     icon: Sparkles,
     title: "Retreats & Workshops",
-    description: "Immersive experiences in beautiful locations for deep transformation.",
+    description: "Immersive experiences in beautiful locations for deep transformation, community building, and intensive practice.",
     duration: "Multi-day",
-    level: "All Levels",
+    level: "Immersive Experience",
+    focus: "Deep Transformation & Community",
     color: "bg-lavender/30",
   },
   {
     icon: Users,
     title: "Yoga Philosophy",
-    description: "Explore the roots and wisdom of yoga philosophy with our experienced instructors.",
+    description: "Explore the roots and wisdom of yoga philosophy with our experienced instructors through sacred texts and discussions.",
     duration: "45 min",
-    level: "All Levels",
+    level: "Curious Minds",
+    focus: "Ancient Wisdom & Ethics",
     color: "bg-emerald-100/40",
     extra: true,
   },
   {
     icon: BookOpen,
     title: "Instructor Q&A",
-    description: "Get your questions answered in live Q&A sessions with our yoga teachers.",
+    description: "Get your questions answered in live Q&A sessions with our yoga teachers about practice, lifestyle, and philosophy.",
     duration: "30 min",
-    level: "All Levels",
+    level: "All Questers",
+    focus: "Knowledge Sharing & Clarification",
     color: "bg-pink-100/40",
     extra: true,
   },
   {
     icon: Flower2,
     title: "Teacher's Special Class",
-    description: "Unique classes designed and led by our lead instructors for deeper learning.",
+    description: "Unique classes designed and led by our lead instructors for deeper learning of advanced techniques and variations.",
     duration: "60 min",
-    level: "All Levels",
+    level: "Enthusiasts",
+    focus: "Advanced Variations & Deep Dive",
     color: "bg-indigo-100/40",
     extra: true,
   },
@@ -115,7 +128,7 @@ const ServicesSection = () => {
       {/* Background Decoration */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-background to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent" />
-      
+
       <div className="container mx-auto px-6 relative">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -128,32 +141,45 @@ const ServicesSection = () => {
             <span className="text-primary italic">For Every Journey</span>
           </h2>
           <p className="text-muted-foreground text-lg breathing-rhythm">
-            Whether you're beginning your yoga practice or deepening your experience, 
+            Whether you're beginning your yoga practice or deepening your experience,
             find the perfect program to support your growth.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {visibleServices.map((service, index) => (
             <div
               key={index}
-              className="group p-8 rounded-3xl bg-background shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1"
+              className="group p-8 rounded-3xl bg-background shadow-soft hover:shadow-glow transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border border-border/40 hover:border-primary/20"
             >
-              <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110`}>
-                <service.icon className="w-7 h-7 text-primary" />
+              <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+                <service.icon className="w-8 h-8 text-primary" />
               </div>
-              
-              <h3 className="font-serif text-2xl text-foreground mb-3">{service.title}</h3>
-              <p className="text-muted-foreground breathing-rhythm mb-6">{service.description}</p>
-              
-              <div className="flex items-center gap-4 text-sm">
-                <span className="px-3 py-1 rounded-full bg-secondary text-secondary-foreground">
+
+              <h3 className="font-serif text-2xl text-foreground mb-4">{service.title}</h3>
+
+              <div className="mb-6 flex-grow">
+                <p className="text-muted-foreground text-sm breathing-rhythm mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                <div className="pt-4 border-t border-border/40">
+                  <span className="text-xs font-semibold text-primary/60 uppercase tracking-widest mb-2 block">Core Focus</span>
+                  <p className="text-foreground text-sm font-medium italic">
+                    {service.focus}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 mt-auto">
+                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-secondary/40 text-secondary-foreground text-xs font-medium">
+                  <Wind className="w-3.5 h-3.5 opacity-60" />
                   {service.duration}
-                </span>
-                <span className="px-3 py-1 rounded-full bg-primary/10 text-primary">
+                </div>
+                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-primary/10 text-primary text-xs font-bold uppercase tracking-wide">
+                  <Sparkles className="w-3.5 h-3.5 opacity-60" />
                   {service.level}
-                </span>
+                </div>
               </div>
             </div>
           ))}
