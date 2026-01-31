@@ -126,7 +126,7 @@ const Footer = () => {
             © {currentYear} Alayam Yoga. All rights reserved.
           </p>
           <p className="text-sm text-background/50 flex items-center gap-1">
-            Made with <Heart className="w-3 h-3 text-primary-soft" /> for mindful living
+            Made with <Heart className="w-3 h-3 text-primary-soft" /> for mindful living by verbenatech
           </p>
         </div>
       </div>
