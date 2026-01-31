@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
 
             <p className="text-sm text-background/50">
-              Navi Mumbai, India
+              Alayam Yoga Studio, Navi Mumbai, India
             </p>
           </div>
 

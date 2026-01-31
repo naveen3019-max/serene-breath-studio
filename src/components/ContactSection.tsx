@@ -23,9 +23,9 @@ const ContactSection = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "meena200614@gmail.com" },
-    { icon: Phone, label: "Phone / WhatsApp", value: "+91 93205 50227" },
-    { icon: MapPin, label: "Studio Location", value: "Navi Mumbai, Maharashtra, India" },
+    { icon: Mail, label: "Email", value: "meena200614@gmail.com", href: "mailto:meena200614@gmail.com" },
+    { icon: Phone, label: "Phone / WhatsApp", value: "+91 93205 50227", href: "https://wa.me/919320550227" },
+    { icon: MapPin, label: "Alayam Studio Location", value: "Navi Mumbai, Maharashtra, India" },
   ];
 
   return (
@@ -67,7 +67,18 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">{info.label}</p>
-                    <p className="text-foreground font-medium">{info.value}</p>
+                    {info.href ? (
+                      <a
+                        href={info.href}
+                        className="text-foreground font-medium hover:text-primary transition-colors duration-300"
+                        target={info.href.startsWith('http') ? "_blank" : undefined}
+                        rel={info.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                      >
+                        {info.value}
+                      </a>
+                    ) : (
+                      <p className="text-foreground font-medium">{info.value}</p>
+                    )}
                   </div>
                 </div>
               ))}
