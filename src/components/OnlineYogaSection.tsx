@@ -1,6 +1,6 @@
 import { Globe, Users, Heart, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import instructorOnlineImg from "@/assets/instructor-online-teaching.png";
+import instructorOnlineImg from "@/assets/online-yoga-main.jpg";
 import communityImg from "@/assets/international-community.png";
 
 const OnlineYogaSection = () => {

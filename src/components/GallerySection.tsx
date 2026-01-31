@@ -1,7 +1,7 @@
 import { useState } from "react";
-import natureMeditationImg from "@/assets/nature-meditation.jpg";
+import natureMeditationImg from "@/assets/nature-meditation-new.jpg";
 import sunriseYogaImg from "@/assets/sunrise-yoga.jpg";
-import instructorOnlineImg from "@/assets/instructor-online-teaching.png";
+import instructorOnlineImg from "@/assets/online-yoga-main.jpg";
 import communityImg from "@/assets/international-community.png";
 import studioSessionImg from "@/assets/studio-session.jpg";
 import awardsImg from "@/assets/awards.jpg";
@@ -50,6 +50,12 @@ const GallerySection = () => {
             alt: "Global online yoga community circle",
             title: "Global Community",
             category: "Experience",
+        },
+        {
+            src: instructorOnlineImg,
+            alt: "Instructor demonstrating poses in online session",
+            title: "Live Instruction",
+            category: "Online",
         },
     ];
 

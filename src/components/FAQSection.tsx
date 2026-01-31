@@ -54,7 +54,7 @@ const faqs = [
     {
         question: "How do I book and schedule my first online class?",
         answer:
-            "Simply contact me via email (meena200614@gmail.com) or WhatsApp (+91 98765 43210) with your preferred time zone and availability. We'll schedule a free 15-minute consultation to discuss your goals, and then set up your first session. I'll send you all the necessary links and instructions.",
+            "Simply contact me via email (meena200614@gmail.com) or WhatsApp (+91 93205 50227) with your preferred time zone and availability. We'll schedule a free 15-minute consultation to discuss your goals, and then set up your first session. I'll send you all the necessary links and instructions.",
     },
     {
         question: "What is your cancellation and rescheduling policy?",

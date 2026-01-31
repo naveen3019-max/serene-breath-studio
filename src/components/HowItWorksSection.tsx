@@ -1,8 +1,8 @@
 import { CheckCircle2, Video, Calendar, ClipboardCheck, TrendingUp, Heart, Users, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import natureMeditationImg from "@/assets/nature-meditation.jpg";
+import natureMeditationImg from "@/assets/nature-meditation-new.jpg";
 import sunriseYogaImg from "@/assets/sunrise-yoga.jpg";
-import onlineTeachingImg from "@/assets/instructor-online-teaching.png";
+import onlineTeachingImg from "@/assets/online-yoga-main.jpg";
 import communityImg from "@/assets/international-community.png";
 
 const HowItWorksSection = () => {

@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
 
             <p className="text-sm text-background/50">
-              India
+              Navi Mumbai, India
             </p>
           </div>
 

@@ -24,8 +24,8 @@ const ContactSection = () => {
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "meena200614@gmail.com" },
-    { icon: Phone, label: "Phone / WhatsApp", value: "+91 98765 43210" },
-    { icon: MapPin, label: "Studio Location", value: "Alayam Yoga Studio, Chennai, Tamil Nadu, India" },
+    { icon: Phone, label: "Phone / WhatsApp", value: "+91 93205 50227" },
+    { icon: MapPin, label: "Studio Location", value: "Navi Mumbai, Maharashtra, India" },
   ];
 
   return (
