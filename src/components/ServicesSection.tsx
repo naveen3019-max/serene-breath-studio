@@ -16,7 +16,7 @@ const services = [
   {
     icon: Wind,
     title: "Hatha Yoga",
-    description: "A typical hatha yoga integrates asanas (postures), pranayama (mindful breathing) and meditation to align, strengthen and balance the body and mind. It promotes calm and focus.",
+    description: "A typical hatha yoga integrates asanas (postures), pranayama (mindful breathing) and meditation to align, strengthen and balance the body and mind. It promotes calmness and focus.",
     duration: "60-90 min",
     level: "Beginner Friendly",
     focus: "Alignment & Foundational Strength",
@@ -52,7 +52,7 @@ const services = [
   {
     icon: Wind,
     title: "Pranayama",
-    description: "It is a yogic practice of breath control. It uses specific techniques like deep inhalation (purak) and holding breath (kumbak) or slow exhalation (rechaka). It helps to calm the mind.",
+    description: "It is a yogic practice of breath control. It uses specific techniques like deep inhalation (purak) and holding breath (kumbak) and slow exhalation (rechaka). It helps to calm the mind.",
     duration: "20-40 min",
     level: "All Paths",
     focus: "Vital Energy & Nervous System Regulation",
@@ -71,7 +71,7 @@ const services = [
     icon: Monitor,
     title: "Online Classes",
     description: "Join live virtual sessions from anywhere in the world with full interaction and real-time posture corrections.",
-    duration: "45-60 min",
+    duration: "60 min",
     level: "Accessible to All",
     focus: "Global Connection & Home Practice",
     color: "bg-accent/30",
@@ -172,10 +172,13 @@ const ServicesSection = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-3 mt-auto">
-                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-secondary/40 text-secondary-foreground text-xs font-medium">
-                  <Wind className="w-3.5 h-3.5 opacity-60" />
-                  {service.duration}
-                </div>
+
+                {service.title === "Online Classes" && (
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-secondary/40 text-secondary-foreground text-xs font-medium">
+                    <Wind className="w-3.5 h-3.5 opacity-60" />
+                    {service.duration}
+                  </div>
+                )}
                 <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-primary/10 text-primary text-xs font-bold uppercase tracking-wide">
                   <Sparkles className="w-3.5 h-3.5 opacity-60" />
                   {service.level}

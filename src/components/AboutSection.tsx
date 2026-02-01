@@ -3,10 +3,10 @@ import { Award, GraduationCap, Heart, Globe } from "lucide-react";
 
 const AboutSection = () => {
   const highlights = [
-    { icon: GraduationCap, text: "15+ Years Experience" },
-    { icon: Award, text: "RYT-500 Certified" },
-    { icon: Globe, text: "Global Retreats" },
-    { icon: Heart, text: "5000+ Students" },
+    { icon: GraduationCap, text: "10+ Years Experience" },
+    { icon: Award, text: "University Certified" },
+    { icon: Globe, text: "Global Reach" },
+    { icon: Heart, text: "Students of all ages" },
   ];
 
   return (
@@ -45,33 +45,36 @@ const AboutSection = () => {
             </h2>
 
             <p className="text-muted-foreground text-lg breathing-rhythm mb-6">
-              My journey with yoga began over 15 years ago, not in a studio, but on a quiet
-              beach in Kerala, where I discovered the profound connection between breath,
-              movement, and inner peace. Since then, I've dedicated my life to deepening
-              this practice and sharing its transformative power with others.
+              My journey with yoga began over 10+ years ago, where I discovered the profound
+              connection between breath, movement, and inner peace. Since then, I started to
+              deepen this practice and sharing its transformative power with others
+              worldwide.
             </p>
 
             <p className="text-muted-foreground breathing-rhythm mb-4">
-              I've had the honor of studying under experienced masters across India, where I
-              learned the sacred art of alignment, pranayama, and therapeutic yoga. My
-              training encompasses various styles including Hatha, Vinyasa Flow, Ashtanga,
-              Patanjali Yoga, and meditation practices, allowing me to offer a well-rounded
-              approach to each student's unique journey.
+              I've had the honor of studying and certified at University, School of Ayurveda
+              established to provide service par excellence to mankind through knowledge of
+              Ayurveda and related areas of life sciences, where I learned the sacred art of
+              alignment, pranayama, and therapeutic yoga. My training encompasses various
+              styles including Hatha, Vinyasa Flow, Ashtanga, Patanjali Yoga, Pranayam and
+              Meditation practices, allowing me to offer a well-rounded approach to each
+              student's unique journey.
             </p>
 
             <p className="text-muted-foreground breathing-rhythm mb-4">
-              As a certified RYT-500 instructor with over 4 years of professional teaching
-              experience, I've guided thousands of students from complete beginners to
-              advanced practitioners. I've conducted transformative workshops in schools,
-              colleges, and corporate settings, and had the privilege of serving as a judge
-              for university yoga competitions.
+              As a university certified yoga instructor with years of professional teaching
+              experience, I've guided students from complete beginners to advanced
+              practitioners. I've conducted transformative workshops in schools, colleges
+              and had the privilege of serving as a judge for university yoga competitions
+              which was conducted by government of India
             </p>
 
             <p className="text-muted-foreground breathing-rhythm mb-4">
-              My teaching philosophy is simple: yoga is not about touching your toes, it's
-              about what you learn on the way down. I believe in creating a safe, inclusive
-              space where every body is honored, every breath is sacred, and every student
-              can discover their own unique path to wellness and self-discovery.
+              My teaching philosophy is simple: yoga is not about only doing asanas and
+              pranayam; it's about discovering yourself, connecting with your inner soul. I
+              believe in creating a healthy life, where everybody is privileged, every
+              breath is sacred, and every student can discover their own unique path to
+              wellness and self-discovery.
             </p>
 
             {/* Highlights Grid */}
