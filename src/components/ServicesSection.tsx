@@ -5,15 +5,6 @@ import { useState } from "react";
 
 const services = [
   {
-    icon: Flower2,
-    title: "Meditation & Mindfulness",
-    description: "Directing attention to a single point. Noticing thoughts and feelings as they arise. Cultivating a feeling of compassion and warmth towards yourself and others.",
-    duration: "30-60 min",
-    level: "All Levels Welcome",
-    focus: "Inner Peace & Emotional Balance",
-    color: "bg-lavender/30",
-  },
-  {
     icon: Wind,
     title: "Hatha Yoga",
     description: "A typical hatha yoga integrates asanas (postures), pranayama (mindful breathing) and meditation to align, strengthen and balance the body and mind. It promotes calmness and focus.",
@@ -21,6 +12,15 @@ const services = [
     level: "Beginner Friendly",
     focus: "Alignment & Foundational Strength",
     color: "bg-accent/30",
+  },
+  {
+    icon: BookOpen,
+    title: "Patanjali Yoga",
+    description: "It is a classical system of yoga focusing on calming the mind's fluctuations to achieve spiritual enlightenment, not just physical postures. It is a holistic path.",
+    duration: "60-75 min",
+    level: "Deep Practice",
+    focus: "Spiritual Growth & Mental Control",
+    color: "bg-blue-100/40",
   },
   {
     icon: Flame,
@@ -41,15 +41,6 @@ const services = [
     color: "bg-primary/10",
   },
   {
-    icon: BookOpen,
-    title: "Patanjali Yoga",
-    description: "It is a classical system of yoga focusing on calming the mind's fluctuations to achieve spiritual enlightenment, not just physical postures. It is a holistic path.",
-    duration: "60-75 min",
-    level: "Deep Practice",
-    focus: "Spiritual Growth & Mental Control",
-    color: "bg-blue-100/40",
-  },
-  {
     icon: Wind,
     title: "Pranayama",
     description: "It is a yogic practice of breath control. It uses specific techniques like deep inhalation (purak) and holding breath (kumbak) and slow exhalation (rechaka). It helps to calm the mind.",
@@ -57,6 +48,15 @@ const services = [
     level: "All Paths",
     focus: "Vital Energy & Nervous System Regulation",
     color: "bg-cyan-100/40",
+  },
+  {
+    icon: Flower2,
+    title: "Meditation & Mindfulness",
+    description: "Directing attention to a single point. Noticing thoughts and feelings as they arise. Cultivating a feeling of compassion and warmth towards yourself and others.",
+    duration: "30-60 min",
+    level: "All Levels Welcome",
+    focus: "Inner Peace & Emotional Balance",
+    color: "bg-lavender/30",
   },
   {
     icon: Users,
