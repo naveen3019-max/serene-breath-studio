@@ -1,15 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroImage from "@/assets/hero-yoga.jpg";
+import natureImage from "@/assets/hero-forest.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Nature Image (no lady photo) */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
-          alt="Yoga instructor meditating in a serene forest at sunrise"
+          src={natureImage}
+          alt="Serene nature background for yoga"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/70" />
