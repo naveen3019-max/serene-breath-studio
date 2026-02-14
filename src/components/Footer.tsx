@@ -12,22 +12,22 @@ const Footer = () => {
 
   const links = {
     practice: [
-      { name: "Hatha Yoga", href: "#services" },
-      { name: "Vinyasa Flow", href: "#services" },
-      { name: "Meditation", href: "#services" },
-      { name: "Private Sessions", href: "#services" },
+      { name: "Hatha Yoga", href: "/#services" },
+      { name: "Vinyasa Flow", href: "/#services" },
+      { name: "Meditation", href: "/#services" },
+      { name: "Private Sessions", href: "/#services" },
     ],
     about: [
-      { name: "Our Story", href: "#about" },
-      { name: "Instructor", href: "#about" },
-      { name: "Testimonials", href: "#testimonials" },
-      { name: "Contact", href: "#contact" },
+      { name: "Our Story", href: "/#about" },
+      { name: "How It Works", href: "/how-it-works" },
+      { name: "Testimonials", href: "/#testimonials" },
+      { name: "Contact", href: "/#contact" },
     ],
     resources: [
-      { name: "Schedule", href: "#" },
-      { name: "Pricing", href: "#" },
-      { name: "FAQ", href: "#" },
-      { name: "Blog", href: "#" },
+      { name: "Schedule", href: "/#schedule" },
+      { name: "Pricing", href: "/#pricing" },
+      { name: "FAQ", href: "/#faq" },
+      { name: "Blog", href: "/#faq" },
     ],
   };
 

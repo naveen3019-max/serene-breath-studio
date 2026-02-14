@@ -300,7 +300,7 @@ const HowItWorksSection = () => {
                         a healthier, more balanced life.
                     </p>
                     <Button size="lg" asChild>
-                        <a href="#contact">Schedule Free Consultation</a>
+                        <a href="/#contact">Schedule Free Consultation</a>
                     </Button>
                 </div>
             </div>

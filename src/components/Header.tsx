@@ -15,29 +15,27 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Benefits", href: "#benefits" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "/#about" },
+    { name: "Services", href: "/#services" },
+    { name: "Benefits", href: "/#benefits" },
+    { name: "Testimonials", href: "/#testimonials" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
           ? "glass-card py-4"
           : "bg-transparent py-6"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-serif text-lg">A</span>
           </div>
-          <span className={`font-serif text-xl font-semibold transition-colors duration-300 ${
-            isScrolled ? "text-foreground" : "text-primary-foreground"
-          }`}>
+          <span className={`font-serif text-xl font-semibold transition-colors duration-300 ${isScrolled ? "text-foreground" : "text-primary-foreground"
+            }`}>
             Alayam Yoga
           </span>
         </a>
@@ -48,9 +46,8 @@ const Header = () => {
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-all duration-300 hover:opacity-70 ${
-                isScrolled ? "text-foreground" : "text-primary-foreground"
-              }`}
+              className={`text-sm font-medium transition-all duration-300 hover:opacity-70 ${isScrolled ? "text-foreground" : "text-primary-foreground"
+                }`}
             >
               {link.name}
             </a>
@@ -63,9 +60,8 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className={`md:hidden p-2 transition-colors ${
-            isScrolled ? "text-foreground" : "text-primary-foreground"
-          }`}
+          className={`md:hidden p-2 transition-colors ${isScrolled ? "text-foreground" : "text-primary-foreground"
+            }`}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
