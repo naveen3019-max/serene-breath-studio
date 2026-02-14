@@ -91,9 +91,18 @@ const GallerySection = () => {
                                 src={image.src}
                                 alt={image.alt}
                                 className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+                                onContextMenu={(e) => e.preventDefault()}
+                                draggable={false}
+                                onDragStart={(e) => e.preventDefault()}
+                                style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                             />
-                            {/* Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            {/* Transparent protective overlay */}
+                            <div
+                                className="absolute inset-0 pointer-events-none"
+                                style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
+                            />
+                            {/* Hover Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 pointer-events-none">
                                 <span className="text-primary-foreground/80 text-xs font-medium tracking-widest uppercase mb-2">
                                     {image.category}
                                 </span>
