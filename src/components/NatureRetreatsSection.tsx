@@ -64,6 +64,15 @@ const NatureRetreatsSection = () => {
                                     src={retreat.image}
                                     alt={retreat.title}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    onContextMenu={(e) => e.preventDefault()}
+                                    draggable={false}
+                                    onDragStart={(e) => e.preventDefault()}
+                                    style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
+                                />
+                                {/* Transparent protective overlay */}
+                                <div
+                                    className="absolute inset-0 pointer-events-none"
+                                    style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                                 <div className="absolute top-6 left-6">

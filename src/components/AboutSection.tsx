@@ -24,6 +24,15 @@ const AboutSection = () => {
                   src={profileImg}
                   alt="Yoga instructor profile"
                   className="w-full h-full object-cover rounded-[2rem]"
+                  onContextMenu={(e) => e.preventDefault()}
+                  draggable={false}
+                  onDragStart={(e) => e.preventDefault()}
+                  style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
+                />
+                {/* Transparent protective overlay */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                 />
               </div>
             </div>

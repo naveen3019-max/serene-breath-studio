@@ -11,6 +11,15 @@ const HeroSection = () => {
           src={natureImage}
           alt="Serene nature background for yoga"
           className="w-full h-full object-cover"
+          onContextMenu={(e) => e.preventDefault()}
+          draggable={false}
+          onDragStart={(e) => e.preventDefault()}
+          style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
+        />
+        {/* Transparent protective overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/70" />
       </div>
