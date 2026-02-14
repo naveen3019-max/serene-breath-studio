@@ -22,13 +22,17 @@ const ContactSection = () => {
 
       const data = await response.json();
 
-      if (data.success) {
+      // Check if response is ok and data.success is true
+      if (response.ok && data.success) {
         setResult("Thank you for reaching out! We'll get back to you soon.");
         e.currentTarget.reset();
       } else {
-        setResult("Oops! Something went wrong. Please try again.");
+        // Log the error for debugging
+        console.error("Form submission error:", data);
+        setResult(data.message || "Oops! Something went wrong. Please try again.");
       }
     } catch (error) {
+      console.error("Network error:", error);
       setResult("Error submitting form. Please try again.");
     }
   };
@@ -152,10 +156,10 @@ const ContactSection = () => {
 
               {result && (
                 <p className={`text-center text-sm ${result.includes("Error") || result.includes("wrong")
-                    ? "text-red-500"
-                    : result === "Sending..."
-                      ? "text-muted-foreground"
-                      : "text-primary"
+                  ? "text-red-500"
+                  : result === "Sending..."
+                    ? "text-muted-foreground"
+                    : "text-primary"
                   }`}>
                   {result}
                 </p>
