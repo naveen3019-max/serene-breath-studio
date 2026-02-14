@@ -245,3 +245,92 @@
     opacity: 1;
   }
 }
+
+/* ===================================
+   SECURITY & CONTENT PROTECTION
+   =================================== */
+
+/* Disable right-click on images */
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: auto;
+}
+
+/* Prevent image dragging */
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+/* Add watermark overlay to background images */
+.protected-image {
+  position: relative;
+}
+
+.protected-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Disable text selection on sensitive content */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Prevent context menu on protected elements */
+.no-context-menu {
+  -webkit-touch-callout: none;
+}
+
+/* Disable screenshot indicators (visual deterrent) */
+@media print {
+  img {
+    display: none;
+  }
+  
+  .no-print {
+    display: none;
+  }
+}
+
+/* Prevent image caching in some contexts */
+img[loading="lazy"] {
+  content-visibility: auto;
+}
+
+/* Additional layer: Make images non-draggable via CSS */
+* {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* Allow only text input fields to be draggable/selectable */
+input, textarea, [contenteditable="true"] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  -webkit-user-drag: auto;
+}

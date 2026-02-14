@@ -14,6 +14,16 @@ const ContactSection = () => {
     // Save form reference before async operation
     const form = e.currentTarget;
     const formData = new FormData(form);
+
+    // Bot detection: check honeypot field
+    const honeypot = formData.get('botcheck');
+    if (honeypot) {
+      // This is likely a bot - silently reject
+      setResult("Thank you for reaching out! We'll get back to you soon.");
+      form.reset();
+      return;
+    }
+
     formData.append("access_key", "d5e14daa-4fb6-484b-a9fb-980de13baec9");
 
     try {
@@ -150,6 +160,15 @@ const ContactSection = () => {
                   required
                 />
               </div>
+
+              {/* Honeypot field - hidden from users, visible to bots */}
+              <input
+                type="text"
+                name="botcheck"
+                className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
+              />
 
               <Button type="submit" size="lg" className="w-full">
                 <Send className="mr-2 w-4 h-4" />
