@@ -18,8 +18,9 @@ const HeroSection = () => {
         />
         {/* Transparent protective overlay */}
         <div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0"
           style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
+          onContextMenu={(e) => e.preventDefault()}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/70" />
       </div>

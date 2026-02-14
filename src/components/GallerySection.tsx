@@ -98,11 +98,12 @@ const GallerySection = () => {
                             />
                             {/* Transparent protective overlay */}
                             <div
-                                className="absolute inset-0 pointer-events-none"
+                                className="absolute inset-0"
                                 style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
+                                onContextMenu={(e) => e.preventDefault()}
                             />
                             {/* Hover Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 pointer-events-none">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                                 <span className="text-primary-foreground/80 text-xs font-medium tracking-widest uppercase mb-2">
                                     {image.category}
                                 </span>

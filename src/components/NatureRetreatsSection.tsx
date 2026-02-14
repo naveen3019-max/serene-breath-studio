@@ -71,8 +71,9 @@ const NatureRetreatsSection = () => {
                                 />
                                 {/* Transparent protective overlay */}
                                 <div
-                                    className="absolute inset-0 pointer-events-none"
+                                    className="absolute inset-0"
                                     style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
+                                    onContextMenu={(e) => e.preventDefault()}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                                 <div className="absolute top-6 left-6">

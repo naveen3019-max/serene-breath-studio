@@ -31,8 +31,9 @@ const AboutSection = () => {
                 />
                 {/* Transparent protective overlay */}
                 <div
-                  className="absolute inset-0 pointer-events-none"
+                  className="absolute inset-0"
                   style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
+                  onContextMenu={(e) => e.preventDefault()}
                 />
               </div>
             </div>
