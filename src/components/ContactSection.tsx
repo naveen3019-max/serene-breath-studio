@@ -11,7 +11,9 @@ const ContactSection = () => {
     e.preventDefault();
     setResult("Sending...");
 
-    const formData = new FormData(e.currentTarget);
+    // Save form reference before async operation
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     formData.append("access_key", "d5e14daa-4fb6-484b-a9fb-980de13baec9");
 
     try {
@@ -25,7 +27,7 @@ const ContactSection = () => {
       // Check if response is ok and data.success is true
       if (response.ok && data.success) {
         setResult("Thank you for reaching out! We'll get back to you soon.");
-        e.currentTarget.reset();
+        form.reset(); // Use saved form reference
       } else {
         // Log the error for debugging
         console.error("Form submission error:", data);
