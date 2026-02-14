@@ -139,6 +139,15 @@ const HowItWorksSection = () => {
                                             src={step.image}
                                             alt={step.title}
                                             className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                                            onContextMenu={(e) => e.preventDefault()}
+                                            draggable={false}
+                                            onDragStart={(e) => e.preventDefault()}
+                                            style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
+                                        />
+                                        {/* Transparent protective overlay */}
+                                        <div
+                                            className="absolute inset-0 pointer-events-none"
+                                            style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
                                     </div>
