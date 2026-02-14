@@ -3,23 +3,34 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [result, setResult] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent",
-      description: "Thank you for reaching out. We'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setResult("Sending...");
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "d5e14daa-4fb6-484b-a9fb-980de13baec9");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Thank you for reaching out! We'll get back to you soon.");
+        e.currentTarget.reset();
+      } else {
+        setResult("Oops! Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setResult("Error submitting form. Please try again.");
+    }
   };
 
   const contactInfo = [
@@ -106,8 +117,7 @@ const ContactSection = () => {
               <div>
                 <label className="text-sm text-muted-foreground mb-2 block">Your Name</label>
                 <Input
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  name="name"
                   placeholder="Enter your name"
                   className="h-12 rounded-xl bg-background border-border/50 focus:border-primary"
                   required
@@ -118,8 +128,7 @@ const ContactSection = () => {
                 <label className="text-sm text-muted-foreground mb-2 block">Email Address</label>
                 <Input
                   type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  name="email"
                   placeholder="Enter your email"
                   className="h-12 rounded-xl bg-background border-border/50 focus:border-primary"
                   required
@@ -129,8 +138,7 @@ const ContactSection = () => {
               <div>
                 <label className="text-sm text-muted-foreground mb-2 block">Your Message</label>
                 <Textarea
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  name="message"
                   placeholder="Tell us about your yoga goals..."
                   className="min-h-32 rounded-xl bg-background border-border/50 focus:border-primary resize-none"
                   required
@@ -141,6 +149,17 @@ const ContactSection = () => {
                 <Send className="mr-2 w-4 h-4" />
                 Send Message
               </Button>
+
+              {result && (
+                <p className={`text-center text-sm ${result.includes("Error") || result.includes("wrong")
+                    ? "text-red-500"
+                    : result === "Sending..."
+                      ? "text-muted-foreground"
+                      : "text-primary"
+                  }`}>
+                  {result}
+                </p>
+              )}
             </form>
           </div>
         </div>
