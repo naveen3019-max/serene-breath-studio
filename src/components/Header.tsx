@@ -25,8 +25,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-          ? "glass-card py-4"
-          : "bg-transparent py-6"
+        ? "glass-card py-4"
+        : "bg-transparent py-6"
         }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
@@ -52,8 +52,8 @@ const Header = () => {
               {link.name}
             </a>
           ))}
-          <Button variant={isScrolled ? "default" : "hero"} size="sm">
-            Book a Class
+          <Button asChild variant={isScrolled ? "default" : "hero"} size="sm">
+            <a href="/#contact">Book a Class</a>
           </Button>
         </nav>
 
@@ -81,8 +81,10 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="default" className="mt-4">
-              Book a Class
+            <Button asChild variant="default" className="mt-4">
+              <a href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                Book a Class
+              </a>
             </Button>
           </nav>
         </div>

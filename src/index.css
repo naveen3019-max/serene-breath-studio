@@ -143,7 +143,12 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif tracking-tight;
   }
 }
@@ -207,19 +212,25 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
+
   50% {
     transform: translateY(-20px) rotate(2deg);
   }
 }
 
 @keyframes breathe {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.8;
   }
+
   50% {
     transform: scale(1.05);
     opacity: 1;
@@ -231,6 +242,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -241,6 +253,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -307,7 +320,7 @@ img::-moz-selection {
   img {
     display: none;
   }
-  
+
   .no-print {
     display: none;
   }
@@ -327,7 +340,9 @@ img[loading="lazy"] {
 }
 
 /* Allow only text input fields to be draggable/selectable */
-input, textarea, [contenteditable="true"] {
+input,
+textarea,
+[contenteditable="true"] {
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
